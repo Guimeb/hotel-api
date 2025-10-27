@@ -27,12 +27,9 @@ Desenvolvido em **Java 21** com **Spring Boot 3**, seguindo arquitetura em **3 c
 - Validação de número único.  
 - "Soft delete" (inativação).
 
-### 📅 Criação de Reservas
-- Endpoint para criar reservas com múltiplas validações:
-  - **Regra 1:** Datas válidas  
-  - **Regra 2:** Disponibilidade/sobreposição  
-  - **Regra 3:** Capacidade do quarto  
-  - **Regra 6:** Cálculo de valor estimado
+### 📅 Gestão de Reservas
+- CRUD completo de quartos.  
+- Validação de datas, capacidade e valor.  
 
 ### 🔁 Fluxo de Estadia (Máquina de Estados - Regra 4)
 - **Check-in:** Valida status `CREATED` e data (Regra 5).  
