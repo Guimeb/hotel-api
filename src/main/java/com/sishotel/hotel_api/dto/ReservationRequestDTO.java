@@ -1,6 +1,6 @@
 package com.sishotel.hotel_api.dto;
 
-import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -18,11 +18,11 @@ public class ReservationRequestDTO {
     private String roomId;
 
     @NotNull(message = "A data de check-in é obrigatória")
-    @Future(message = "A data de check-in deve ser no futuro")
+    @FutureOrPresent(message = "A data de check-in deve ser hoje ou no futuro")
     private LocalDate checkinExpected;
 
     @NotNull(message = "A data de check-out é obrigatória")
-    @Future(message = "A data de check-out deve ser no futuro")
+    @FutureOrPresent(message = "A data de check-out deve ser hoje ou no futuro")
     private LocalDate checkoutExpected;
 
     @NotNull(message = "O número de hóspedes é obrigatório")
